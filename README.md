@@ -1,28 +1,24 @@
-# Supply Chain Optimization Portfolio
+# Supply Chain & Operations Analytics Portfolio
 
-Python scripts from my industrial engineering optimization coursework and
-independent projects, cleaned up and documented for public reference.
-Raw notebooks, reports, and datasets live in a private working repo;
-this repo hosts the distilled, runnable models.
+Fernando Teliz Colchado — Industrial & Systems Engineering student (Tecnológico de Monterrey / Hochschule Reutlingen exchange).
+
+This repository holds the **original, as-submitted materials** (notebooks, team reports, presentations) from two real-client academic projects, so a reviewer can see the actual work rather than a polished rewrite. Each project folder has its own README labeling every file.
 
 ## Projects
 
 ### [`cemex-transport-inventory-optimization/`](cemex-transport-inventory-optimization)
-Two linked models built for CEMEX Mexico West's Guadalajara distribution
-operation:
-- **`transport_allocation_lp.py`** -- a Gurobi mixed-integer LP that
-  allocates CEMEX's own + sub-contracted vehicle fleet across daily
-  client orders, cutting weekly transportation trips **225 -> 123
-  (-37% cost)** versus the carrier's manual allocation.
-- **`inventory_policy_simulation.py`** -- (Q,R) continuous-review and
-  (s,T) periodic-review replenishment simulations that sustained a
-  **96-98% fill rate at a 90% service level** across the analyzed SKUs.
+Two linked models built for **CEMEX** (Guadalajara distribution / Tepic plant), IN2009B Supply Chain course, Tecnológico de Monterrey, Feb–Jun 2025:
+- A Gurobi mixed-integer LP reallocating CEMEX's own + sub-contracted vehicle fleet, cutting weekly transport cost **37%** (748,460 → 469,490 MXN) over the analyzed order week.
+- ABC-classified (Q,R) / (S,T) inventory review policies for 9 SKUs, sustaining **96.1–99.6% fill rates** at a 90% target service level.
 
-**Stack:** Python, pandas, Gurobi (MILP), linear programming, inventory theory.
+> **CEMEX data note:** CEMEX granted permission to publish the datasets, notebooks, and results in this repository for portfolio purposes.
+
+### [`driver-performance-evaluation-system/`](driver-performance-evaluation-system)
+A multi-criteria driver-ranking and clustering system built for **NextGen Deliveries** (an Amazon Delivery Service Partner, Miami FL), IN2004B Data Analytics course, Tecnológico de Monterrey, Aug–Nov 2024. Ranked 52 drivers across 18 KPIs using the Analytic Hierarchy Process and segmented them into 3 performance tiers via clustering.
+
+> **Privacy note:** individual driver names, IDs, and personal contact emails have been anonymized/redacted in the published copy (see that folder's README for details). Company-level information (NextGen, Amazon DSP context) was already public on the author's CV/LinkedIn.
 
 ## Notes
 
-- Source datasets are CEMEX-confidential and are not included; each
-  script documents the expected input schema so the models can be run
-  against comparable data.
+- These are course deliverables, not products: expect Colab-notebook rough edges (`#@param` widgets, manual re-runs per day/product) rather than production code.
 - See my [LinkedIn](https://www.linkedin.com/in/fernando-teliz-c/) for project context.
